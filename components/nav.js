@@ -1,8 +1,9 @@
-import Head from './head'
 import Link from 'next/link'
 
 const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
+  { href: '/resume', label: 'Resume' },
+  { href: '/note', label: 'Note' },
+  { href: '/contact', label: 'Contact' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -14,27 +15,22 @@ const Nav = () => (
       <li>
         <Link prefetch href="/">
           <a>Home</a>
-        </Link>
+        </Link>{' '}
       </li>
+
       <ul>
-        {links.map(
-          ({ key, href, label }) => (
-            <li key={key}>
-              <Link href={href}>
-                <a>{label}</a>
-              </Link>
-            </li>
-          )
-        )}
+        {links.map(({ key, href, label }) => (
+          <li key={key}>
+            <Link prefetch href={href}>
+              <a>{label}</a>
+            </Link>
+          </li>
+        ))}
       </ul>
     </ul>
 
     <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Helvetica,sans-serif;
-      }
-      nav {
+      :global(nav) {
         text-align: center;
       }
       ul {
@@ -51,7 +47,12 @@ const Nav = () => (
       a {
         color: #067df7;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 16px;
+      }
+      a:hover {
+        color: #3db077;
+        border-color: #3db077;
+        transition: color 250ms 50ms ease-in-out;
       }
     `}</style>
   </nav>
