@@ -4,7 +4,6 @@ import AppNavigation from '../components/nav'
 import AppFooter from '../components/FooterApp'
 
 const secret_message = [
-  `The app is deployed with Zeit ⚠⃤`,
   `Append one of these /_src to the end of the root url to see the source`,
   `Oh and I did not leave a message in the dots of the footer 😁`,
 ]

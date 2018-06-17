@@ -2,15 +2,13 @@ const OL = ({ children }) => (
   <ol>
     {children}
 
-    <style jsx>
-      {`
-        ol {
-          list-style: decimal;
-          margin: 30px 0;
-          padding: 0 0 0 22px;
-        }
-      `}
-    </style>
+    <style jsx>{`
+      ol {
+        list-style: decimal;
+        margin: 30px 0;
+        padding: 0 0 0 22px;
+      }
+    `}</style>
   </ol>
 )
 

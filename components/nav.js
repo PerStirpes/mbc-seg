@@ -4,6 +4,7 @@ const links = [
   { href: '/resume', label: 'Resume' },
   { href: '/note', label: 'Note' },
   { href: '/contact', label: 'Contact' },
+  { href: '/exercises', label: 'exercises' },
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -19,13 +20,15 @@ const Nav = () => (
       </li>
 
       <ul>
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <Link prefetch href={href}>
-              <a>{label}</a>
-            </Link>
-          </li>
-        ))}
+        <div id="nav">
+          {links.map(({ key, href, label }) => (
+            <li key={key}>
+              <Link prefetch href={href}>
+                <a>{label}</a>
+              </Link>
+            </li>
+          ))}
+        </div>
       </ul>
     </ul>
 

@@ -3,7 +3,6 @@ export const H1 = ({ children }) => (
     <h1>
       <Anchor content={children} />
       {children}
-
       <style jsx>{`
         h1 {
           text-align: center;
@@ -59,26 +58,24 @@ const Anchor = ({ content }) => {
       <a href={`#${id}`} id={id}>
         #
       </a>
-      <style jsx>
-        {`
-          span {
-            position: absolute;
-            margin-left: -15px;
-            width: 15px;
-          }
+      <style jsx>{`
+        span {
+          position: absolute;
+          margin-left: -15px;
+          width: 15px;
+        }
 
-          a {
-            text-decoration: none;
-            color: #4492ff;
-            padding-top: 30px;
-            visibility: hidden;
-          }
+        a {
+          text-decoration: none;
+          color: #4492ff;
+          padding-top: 30px;
+          visibility: hidden;
+        }
 
-          a:focus {
-            outline: none;
-          }
-        `}
-      </style>
+        a:focus {
+          outline: none;
+        }
+      `}</style>
     </span>
   )
 }
