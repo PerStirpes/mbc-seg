@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import markdown from 'markdown-in-js'
-import Post from '../layouts/post'
-import { Ref, FootNotes, Note } from '../components/footnotes'
-import components from '../components'
+import Link from 'next/link';
+import markdown from 'markdown-in-js';
+import Post from '../layouts/post';
+import { Ref, FootNotes, Note } from '../components/footnotes';
+import components from '../components';
 
 export default Post()(markdown(components)`
 
@@ -55,4 +55,4 @@ Matt
     </Note>
   
   </FootNotes>
-`)
+`);

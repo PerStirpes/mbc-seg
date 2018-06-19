@@ -1,34 +1,34 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { extractStyles } from 'evergreen-ui'
-import * as snippet from '@segment/snippet'
+import Document, { Head, Main, NextScript } from 'next/document';
+import { extractStyles } from 'evergreen-ui';
+import * as snippet from '@segment/snippet';
 
-const defaultDescription = ''
-const defaultOGURL = ''
-const defaultOGImage = ''
+const defaultDescription = '';
+const defaultOGURL = '';
+const defaultOGImage = '';
 
 const {
   ANALYTICS_WRITE_KEY = 'fdhswOnXNIOMwzHDtMx0elBmyX4zZO9i',
   NODE_ENV = 'development',
-} = process.env
+} = process.env;
 
 export default class extends Document {
   static getInitialProps({ renderPage }) {
-    const page = renderPage()
-    const { css, hydrationScript } = extractStyles()
-    return { ...page, css, hydrationScript }
+    const page = renderPage();
+    const { css, hydrationScript } = extractStyles();
+    return { ...page, css, hydrationScript };
   }
 
   renderSnippet() {
     const opts = {
       apiKey: ANALYTICS_WRITE_KEY,
       page: true,
-    }
+    };
 
     if (NODE_ENV === 'development') {
-      return snippet.max(opts)
+      return snippet.max(opts);
     }
 
-    return snippet.min(opts)
+    return snippet.min(opts);
   }
 
   render(...props) {
@@ -76,6 +76,6 @@ export default class extends Document {
           <NextScript />
         </body>
       </html>
-    )
+    );
   }
 }

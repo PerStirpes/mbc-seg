@@ -1,5 +1,5 @@
-import P from './paragraph'
-import HR from './hr'
+import P from './paragraph';
+import HR from './hr';
 
 export const FootNotes = ({ children }) => (
   <div>
@@ -11,7 +11,7 @@ export const FootNotes = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 
 export const Ref = ({ id }) => (
   <a href={`#f${id}`} id={`s${id}`}>
@@ -35,7 +35,7 @@ export const Ref = ({ id }) => (
       }
     `}</style>
   </a>
-)
+);
 
 export const Note = ({ id, children }) => (
   <P>
@@ -61,4 +61,4 @@ export const Note = ({ id, children }) => (
       }
     `}</style>
   </P>
-)
+);

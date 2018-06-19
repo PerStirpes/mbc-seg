@@ -1,7 +1,7 @@
-import markdown from 'markdown-in-js'
-import Post from '../layouts/post'
-import components from '../components'
-import { Button, Popover, Pane, Text } from 'evergreen-ui'
+import markdown from 'markdown-in-js';
+import Post from '../layouts/post';
+import components from '../components';
+import { Button, Popover, Pane, Text } from 'evergreen-ui';
 
 const Btn = () => {
   return (
@@ -28,8 +28,8 @@ const Btn = () => {
     >
       <Button>Trigger Popover</Button>
     </Popover>
-  )
-}
+  );
+};
 
 export default Post()(markdown(components)`
 # Welcome to my Note
@@ -42,4 +42,4 @@ With my destination as google analytics. I found that it was super easy to integ
 I used your cipher svg in my footer too. 
 
 <Btn />
-`)
+`);

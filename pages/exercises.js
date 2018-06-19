@@ -58,7 +58,7 @@ Jerome
 
 > Hey Segment,
 > 
-> I'm using analytics.js to track events and I’m currently sending data to Intercom and Google Analytics. I’m tracking a few events that I don’t want to send to Google Analytics, but I do want to send them to Intercom. Can I do this in the Segment UI? If so, where do I do that? Is there another way to filter events in the `.track()` call itself? 
+> I'm using analytics.js to track events and I’m currently sending data to Intercom and Google Analytics. I’m tracking a few events that I don’t want to send to Google Analytics, but I do want to send them to Intercom. Can I do this in the Segment UI? If so, where do I do that? Is there another way to filter events in the $.track$ call itself? 
 >
 > Best,
 Riley
@@ -79,16 +79,15 @@ Riley
 > Description: Included below are credentials to access an example data set in a Postgres data warehouse, along with some questions requiring basic mysql analysis to answer.
 
 
-# Postgres 🐘cluster credentials:
+# Postgres cluster credentials:
 
-```
+
 Hostname: ec2-54-83-194-117.compute-1.amazonaws.com
 Password: AbVv-wMQGmbOwFpeSdw9paFipJ
 Username: ujzapgrhcborxq
 Port: 5432
 Database: dbt6sotajkgv26
 Schema: music_is_me
-```
 
 
 ## Question #1: How many users canceled their plan? List them by name here.
@@ -114,7 +113,8 @@ Schema: music_is_me
 
 
 
-## Question #4: A few users have appear to have a null `plan_id`. The original events all included a value for the `plan_id` but some were sent through as an integer (`plan_id: 1`) and others were sent as a string (`plan_id: '1'`). Why would that matter? 
+## Question #4: A few users have appear to have a null $plan_id. The original events all included a value for the $plan_id but some were sent through as an integer $plan_id: 1 and others were sent as a string $plan_id: '1'. Why would that matter? 
+
 
 
 
@@ -142,21 +142,6 @@ Schema: music_is_me
 ## Question #1: Describe what the following code block does when executed in a browser
 
 
-
-```js
-function formatQs() {
-	var output = {};
-	var qs = document.location.search.substring(1);
-	qs = qs.split('&');
-
-	for (var i = 0; i < qs.length; i++) {
-		var tokens = qs[i].split('=');
-	  output[tokens[0].toLowerCase()] = tokens[1];
-	}
-
-	return output;
-}
-```
 
 
 

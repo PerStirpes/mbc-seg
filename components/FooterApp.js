@@ -1,5 +1,5 @@
-import React from 'react'
 import Cipher from '../components/cipher'
+
 export default () => (
   <footer>
     <div style={{ paddingBottom: '10px' }}>
@@ -7,55 +7,62 @@ export default () => (
     </div>
 
     <div className="flex-ns flex-wrap-ns justify-start-ns w-100 mt4">
-      <div className="Footer-col w-20 mt3 flex">
+      <div className="Footer-col flex">
         <a
           target="_blank"
-          className="Footer-social dib br-100 overflow-hidden mr3"
+          className="Footer-social overflow-hidden"
           href="https://github.com/PerStirpes"
           title="Follow Me on Github"
         >
           <svg
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
+            width="32"
+            height="32"
+            stroke-linejoin="round"
+            stroke-miterlimit="1.414"
+            viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M10.48.26C4.692.26 0 4.96 0 10.76c0 4.64 3.003 8.574 7.167 9.963.524.096.716-.228.716-.506 0-.25-.01-.91-.014-1.786-2.917.635-3.532-1.407-3.532-1.407-.476-1.213-1.163-1.536-1.163-1.536-.952-.65.072-.638.072-.638 1.05.073 1.605 1.08 1.605 1.08.935 1.606 2.453 1.142 3.05.874.095-.68.366-1.142.665-1.404-2.327-.265-4.773-1.166-4.773-5.19 0-1.146.408-2.083 1.078-2.817-.107-.266-.467-1.333.103-2.78 0 0 .88-.28 2.882 1.077.836-.232 1.732-.35 2.624-.353.89.004 1.787.12 2.624.353 2-1.358 2.88-1.076 2.88-1.076.57 1.446.21 2.513.104 2.78.67.733 1.077 1.67 1.077 2.816 0 4.034-2.45 4.922-4.785 5.182.376.324.71.965.71 1.944 0 1.404-.01 2.536-.01 2.88 0 .28.187.608.72.505 4.16-1.39 7.16-5.323 7.16-9.96 0-5.8-4.693-10.5-10.48-10.5z"
-              fillRule="nonzero"
-              fill="#FFF"
-            />
+            <title id="title">github</title>
+            <g>
+              <path
+                d="M18.837,27.966c8.342,-0.241 9.163,-1.997 9.163,-11.966c0,-11 -1,-12 -12,-12c-11,0 -12,1 -12,12c0,9.995 0.826,11.734 9.228,11.968c0.073,-0.091 0.1,-0.205 0.1,-0.321c0,-0.25 -0.01,-2.816 -0.015,-3.699c-3.037,0.639 -3.678,-1.419 -3.678,-1.419c-0.497,-1.222 -1.213,-1.548 -1.213,-1.548c-0.991,-0.656 0.075,-0.643 0.075,-0.643c1.096,0.075 1.673,1.091 1.673,1.091c0.974,1.617 2.556,1.15 3.178,0.879c0.099,-0.683 0.381,-1.15 0.693,-1.414c-2.425,-0.267 -4.974,-1.175 -4.974,-5.23c0,-1.155 0.426,-2.099 1.124,-2.839c-0.113,-0.268 -0.487,-1.344 0.107,-2.8c0,0 0.917,-0.285 3.003,1.084c0.871,-0.235 1.805,-0.352 2.734,-0.356c0.927,0.004 1.861,0.121 2.734,0.356c2.085,-1.369 3,-1.084 3,-1.084c0.596,1.456 0.221,2.532 0.108,2.8c0.7,0.74 1.123,1.684 1.123,2.839c0,4.065 -2.553,4.96 -4.986,5.221c0.392,0.327 0.741,0.973 0.741,1.96c0,0.946 -0.006,2.619 -0.01,3.728c-0.002,0.549 -0.003,0.959 -0.003,1.074c0,0.109 0.029,0.224 0.095,0.319Z"
+                fillRule="nonzero"
+                fill="#FFF"
+              />
+            </g>
           </svg>
         </a>
         <a
           target="_blank"
-          className="Footer-social dib br-100 overflow-hidden mr3"
+          className="Footer-social overflow-hidden "
           href="http://twitter.com/@2_up"
           title="MBC"
         >
           <svg
-            width="22"
-            height="21"
-            viewBox="0 0 22 21"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M11.16 0C5.372 0 .68 4.7.68 10.5S5.372 21 11.16 21s10.48-4.7 10.48-10.5S16.948 0 11.16 0zm4.167 8.36c.004.09.006.184.006.277 0 2.847-2.162 6.13-6.117 6.13-1.214 0-2.344-.357-3.296-.968.168.02.34.03.513.03 1.007 0 1.934-.346 2.67-.923-.94-.018-1.735-.64-2.008-1.496.13.026.266.04.404.04.195 0 .385-.027.566-.076-.984-.198-1.725-1.07-1.725-2.113v-.026c.29.162.623.26.975.27-.577-.387-.957-1.046-.957-1.793 0-.394.106-.764.292-1.082 1.06 1.303 2.644 2.16 4.43 2.25-.035-.157-.054-.322-.054-.49 0-1.19.962-2.155 2.15-2.155.618 0 1.177.262 1.57.68.49-.096.95-.275 1.364-.522-.16.504-.5.926-.945 1.193.435-.052.85-.168 1.235-.34-.288.433-.653.812-1.073 1.116z"
-              fillRule="nonzero"
-              fill="#FFF"
-            />
+            <g>
+              <path
+                d="M16,28c11,0 12,-1 12,-12c0,-11 -1,-12 -12,-12c-11,0 -12,1 -12,12c0,11 1,12 12,12Zm5.825,-13.901c0,3.669 -2.889,7.901 -8.172,7.901l0,0c-1.622,0 -3.132,-0.46 -4.403,-1.248c0.225,0.026 0.454,0.039 0.685,0.039c1.346,0 2.585,-0.444 3.568,-1.189c-1.258,-0.022 -2.318,-0.825 -2.684,-1.928c0.175,0.032 0.355,0.05 0.54,0.05c0.262,0 0.516,-0.034 0.758,-0.098c-1.315,-0.255 -2.305,-1.377 -2.305,-2.722c0,-0.013 0,-0.024 0.001,-0.036c0.387,0.208 0.829,0.333 1.301,0.348c-0.772,-0.498 -1.279,-1.348 -1.279,-2.312c0,-0.509 0.143,-0.985 0.389,-1.396c1.417,1.681 3.534,2.786 5.921,2.902c-0.049,-0.204 -0.074,-0.416 -0.074,-0.633c0,-1.533 1.286,-2.777 2.872,-2.777c0.826,0 1.573,0.338 2.097,0.877c0.654,-0.124 1.269,-0.356 1.824,-0.674c-0.215,0.649 -0.67,1.192 -1.263,1.536c0.581,-0.067 1.134,-0.216 1.649,-0.437c-0.384,0.557 -0.872,1.046 -1.433,1.438c0.006,0.119 0.008,0.239 0.008,0.359Z"
+                fillRule="nonzero"
+                fill="#FFF"
+              />
+            </g>
           </svg>
         </a>
         <a
           target="_blank"
-          className="Footer-social dib br-100 overflow-hidden mr3"
+          className="Footer-social "
           href="https://www.linkedin.com/in/barrazacarl"
           title="Find Me on Linked In"
         >
           <svg
-            width="22"
-            height="21"
-            viewBox="0 0 22 21"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -70,36 +77,42 @@ export default () => (
         <Cipher />
       </div>
     </div>
-    <style jsx>
-      {`
-        footer {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          background: black;
-          color: white;
-          text-align: center;
-          letter-spacing: 0.03em;
-          margin-top: 10px;
-          width: 100%;
-        }
+    <style jsx>{`
+      footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: black;
+        color: white;
+        text-align: center;
+        letter-spacing: 0.03em;
+        margin-top: 10px;
+        width: 100%;
+      }
 
-        .Footer-social path {
-          transition: fill 0.3s;
+      .Footer-social path {
+         {
+           {
+            /* transition: fill 0.3s; */
+          }
         }
+      }
 
-        .Footer-social:hover path {
-          fill: hsl(151, 44%, 50%);
-        }
+      .Footer-social:hover path {
+        fill: hsl(151, 44%, 50%);
+        box-shadow: none;
+        opacity: 1;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in;
+      }
 
-        a,
-        a:visited,
-        a:active {
-          padding-left: 6px;
-        }
-      `}
-    </style>
+      a,
+      a:visited,
+      a:active {
+        padding-left: 6px;
+      }
+    `}</style>
   </footer>
 )

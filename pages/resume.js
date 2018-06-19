@@ -1,8 +1,8 @@
-import Post from '../layouts/post'
-import HR from '../components/hr'
-import P from '../components/paragraph'
-import { H1, H2, H3 } from '../components/heading'
-import { UL, LI } from '../components/list'
+import Post from '../layouts/post';
+import HR from '../components/hr';
+import P from '../components/paragraph';
+import { H1, H2, H3 } from '../components/heading';
+import { UL, LI } from '../components/list';
 
 export default Post()(
   <div>
@@ -318,4 +318,4 @@ export default Post()(
       }
     `}</style>
   </div>,
-)
+);

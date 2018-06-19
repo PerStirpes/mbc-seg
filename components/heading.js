@@ -13,7 +13,7 @@ export const H1 = ({ children }) => (
       `}</style>
     </h1>
   </Wrapper>
-)
+);
 
 export const H2 = ({ children }) => (
   <Wrapper>
@@ -31,7 +31,7 @@ export const H2 = ({ children }) => (
       `}</style>
     </h2>
   </Wrapper>
-)
+);
 
 export const H3 = ({ children }) => (
   <Wrapper>
@@ -49,9 +49,9 @@ export const H3 = ({ children }) => (
       `}</style>
     </h3>
   </Wrapper>
-)
+);
 const Anchor = ({ content }) => {
-  let id = content
+  let id = content;
 
   return (
     <span>
@@ -77,8 +77,8 @@ const Anchor = ({ content }) => {
         }
       `}</style>
     </span>
-  )
-}
+  );
+};
 
 const Wrapper = ({ children }) => (
   <div>
@@ -90,4 +90,4 @@ const Wrapper = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);

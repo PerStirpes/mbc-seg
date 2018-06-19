@@ -1,28 +1,28 @@
-import App, { Container } from 'next/app'
-import React from 'react'
-import AppNavigation from '../components/nav'
-import AppFooter from '../components/FooterApp'
+import App, { Container } from 'next/app';
+import React from 'react';
+import AppNavigation from '../components/nav';
+import AppFooter from '../components/FooterApp';
 
 const secret_message = [
   `Append one of these /_src to the end of the root url to see the source`,
   `Oh and I did not leave a message in the dots of the footer 😁`,
-]
+];
 
 for (const info of secret_message) {
-  console.log(info)
-  console.log('%c⚠️', 'font-size: 3em')
+  console.log(info);
+  console.log('%c⚠️', 'font-size: 3em');
 }
 
 export default class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
 
     return (
       <Container>
         <div>
           <AppNavigation />
           <Component {...pageProps} />
-          <AppFooter />
+          ` <AppFooter />
         </div>
         <style jsx global>{`
           html,
@@ -79,6 +79,6 @@ export default class MyApp extends App {
           }
         `}</style>
       </Container>
-    )
+    );
   }
 }
