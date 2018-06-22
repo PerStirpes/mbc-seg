@@ -1,89 +1,14 @@
-import React, { Component } from 'react'
-import P from '../components/paragraph'
-import { Button, Label, Textarea, toaster } from 'evergreen-ui'
-import sentryHook from '../components/sentryHook'
-
-class SentryBoundary extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { error: null }
-  }
-
-  componentDidCatch(error, errorInfo) {
-    this.setState({ error })
-    Raven.captureException(error, { extra: errorInfo })
-  }
-
-  render() {
-    if (this.state.error) {
-      return (
-        <div className="snap">
-          <oops />
-          <div className="snap-message">
-            <p>We're sorry - something's gone wrong.</p>
-            <p>
-              Our team has been notified, but click{' '}
-              <button
-                onClick={() => Raven.lastEventId() && Raven.showReportDialog()}
-              >
-                here
-              </button>{' '}
-              to fill out a report.
-            </p>
-          </div>
-        </div>
-      )
-    } else {
-      return this.props.children
-    }
-  }
-}
-
-class Sidebar extends Component {
-  render() {
-    return (
-      <div className="sidebar">
-        <SentryBoundary>
-          <h2>Sidebar</h2>
-          <Widget />
-        </SentryBoundary>
-      </div>
-    )
-  }
-}
-class Widget extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: true, n: 0 }
-  }
-
-  getCount() {
-    if (this.state.n > 3) throw new Error('woops')
-    return `(${this.state.n})`
-  }
-
-  handleClick() {
-    this.setState({ n: this.state.n + 1 })
-  }
+import React, { Component } from 'react';
+import P from '../components/paragraph';
+import { Button, Label, Textarea, toaster } from 'evergreen-ui';
+import Video from '../components/video';
+export default class Contact extends Component {
+  state = { message: '' };
 
   render() {
     return (
       <div>
-        <div>Counter widget {this.getCount(this.state.n)}</div>
-        <button onClick={this.handleClick.bind(this)}>
-          Click me a few times
-        </button>
-      </div>
-    )
-  }
-}
-class Contact extends Component {
-  state = { message: '' }
-
-  render() {
-    return (
-      <div>
-        <h1>My Contact Me</h1>
+        <h4>My Contact Me</h4>
         <P>
           <span>
             <a href="https://www.google.com/maps/place/101%2BPolk%2BSt,%2BSan%2BFrancisco,%2BCA%2B94102/@37.777724,-122.420511,17z/data%3D!3m1!4b1!4m5!3m4!1s0x8085809bfd6b3a3f:0x69c39d21628caf4a!8m2!3d37.7776622!4d-122.4184591">
@@ -94,7 +19,6 @@ class Contact extends Component {
           <a href="mailto:mattbarrazacarl@gmail.com">
             mattbarrazacarl@gmail.com
           </a>
-
           <span> │</span>
           <span>
             <a href="https://github.com/PerStirpes">github.com/PerStirpes</a>
@@ -107,6 +31,10 @@ class Contact extends Component {
             </a>
           </span>
         </P>
+        <Video />
+
+        <div />
+
         <form onSubmit={this.handleSubmit}>
           <Label size={600} display="block">
             <Textarea
@@ -129,10 +57,9 @@ class Contact extends Component {
               })
             }
           >
+            {' '}
             Warning don't press
           </Button>
-          <Widget />
-          <Sidebar />
         </div>
         <style jsx>{`
           div {
@@ -159,20 +86,18 @@ class Contact extends Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 
   handleInput = e => {
-    this.setState({ message: e.target.value })
-  }
+    this.setState({ message: e.target.value });
+  };
 
   handleSubmit = e => {
-    e.preventDefault()
+    e.preventDefault();
     global.analytics.track('Form Submitted', {
       message: this.state.message,
-    })
-    this.setState({ message: '' })
-  }
+    });
+    this.setState({ message: '' });
+  };
 }
-
-export default sentryHook(Contact)

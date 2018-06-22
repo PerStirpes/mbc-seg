@@ -33,13 +33,10 @@ const Btn = () => {
 
 export default Post()(markdown(components)`
 # Welcome to my Note
-Only if you're interested in reading more. So let me see... Check the console for a joke.
+Only if you're interested in reading more. So let me see... Check the console .
 
-I used evergreen & create-next-app and @segment/snippet. 
+Just a demo page to test things out.
 
-With my destination as google analytics. I found that it was super easy to integrate Segment into this site with @segment/snippet. 
-
-I used your cipher svg in my footer too. 
 
 <Btn />
 `);

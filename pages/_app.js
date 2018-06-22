@@ -5,7 +5,6 @@ import AppFooter from '../components/FooterApp';
 
 const secret_message = [
   `Append one of these /_src to the end of the root url to see the source`,
-  `Oh and I did not leave a message in the dots of the footer 😁`,
 ];
 
 for (const info of secret_message) {
@@ -32,11 +31,7 @@ export default class MyApp extends App {
             margin: 0;
             -webkit-font-smoothing: antialiased;
           }
-          body > div:first-child,
-          body > div:first-child > div:first-child,
-          body > div:first-child > div:first-child > div {
-            height: inherit;
-          }
+
           main {
             padding: 30px;
             box-sizing: border-box;
